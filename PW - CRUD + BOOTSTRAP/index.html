@@ -58,6 +58,7 @@
     </nav>
 
     <main class="container">
+       
         <div class="d-inline-flex mt-4 typewriter">
             <h1>Escolha sua experiência</h1>
         </div>
@@ -85,6 +86,50 @@
                     <option value="8">Espaguete</option>
                 </select>
             </div>
+            
+            <!-- BOTÃO DE CADASTRO -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Cadastrar Comida
+            </button>
+    
+            <div id="tarefas" class="row mx-auto my-2 g-3">
+            </div> <!-- row -->
+    
+                   <!--MODAL -->
+                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Tarefa</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row mt-2 g-3">
+                                    <div class="col-12">
+                                        <input id="titulo" type="text" class="form-control" placeholder="título" aria-label="título">
+                                    </div>
+                                    <div class="col-12">
+                                        <input id="pontos" type="number" class="form-control" placeholder="pontos" aria-label="pontos">
+                                    </div>
+                                    <div class="col-12">
+                                        <select id="categoria" class="form-select" aria-label="selecione a categoria">
+                                           <option selected>Selecione a opção</option>
+                                           <option value="vegetarianas">Opções vegetarianas</option>
+                                           <option value="Sazonais">Pratos Sazonais</option>
+                                           <option value="Regionais">Comidas Regionais</option>
+                                           <option value="Opções">Opções da Casa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button id="salvar" type="button" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <div class="col-1">
                 <button type="button" class="btn btn-primary">Salvar</button>
             </div>
@@ -230,6 +275,7 @@
 
     </main>
 
+    <script src="./js/crud.js"></script>
 </body>
 
 </html>
